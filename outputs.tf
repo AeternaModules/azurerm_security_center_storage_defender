@@ -1,3 +1,7 @@
+output "security_center_storage_defenders_id" {
+  description = "Map of id values across all security_center_storage_defenders, keyed the same as var.security_center_storage_defenders"
+  value       = { for k, v in azurerm_security_center_storage_defender.security_center_storage_defenders : k => v.id }
+}
 output "security_center_storage_defenders_malware_scanning_on_upload_cap_gb_per_month" {
   description = "Map of malware_scanning_on_upload_cap_gb_per_month values across all security_center_storage_defenders, keyed the same as var.security_center_storage_defenders"
   value       = { for k, v in azurerm_security_center_storage_defender.security_center_storage_defenders : k => v.malware_scanning_on_upload_cap_gb_per_month }
