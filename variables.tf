@@ -13,11 +13,11 @@ EOT
 
   type = map(object({
     storage_account_id                          = string
-    malware_scanning_on_upload_cap_gb_per_month = optional(number) # Default: -1
-    malware_scanning_on_upload_enabled          = optional(bool)   # Default: false
-    override_subscription_settings_enabled      = optional(bool)   # Default: false
+    malware_scanning_on_upload_cap_gb_per_month = optional(number)
+    malware_scanning_on_upload_enabled          = optional(bool)
+    override_subscription_settings_enabled      = optional(bool)
     scan_results_event_grid_topic_id            = optional(string)
-    sensitive_data_discovery_enabled            = optional(bool) # Default: false
+    sensitive_data_discovery_enabled            = optional(bool)
   }))
 }
 
